@@ -69,7 +69,11 @@ int ques1(int x) {
     z = (z >> 31);
 
     return (z & 1);
+}
 
+int ans1(int x)
+{
+  
 }
 
 /* question 2 */
@@ -81,6 +85,11 @@ int ques2(x) {
     return (y+z);
 }
 
+int ans2(x)
+{
+  
+}
+
 /* question 3 */
 int ques3(int x){
     int y = !x;
@@ -88,6 +97,11 @@ int ques3(int x){
     z = z | y;
 
     return !z;
+}
+
+int ans3(int x)
+{
+  
 }
 
 /* question 4 */
@@ -101,6 +115,10 @@ int ques4(int n) {
     return x & y;
 }
 
+int ans4(int n)
+{
+  
+}
 
 /* question 5 */
 
@@ -121,6 +139,10 @@ int ques6(void) {
     return word | word<<16;
 }
 
+int ans6(void)
+{
+  
+}
 
     /* question 7 */
 
@@ -129,6 +151,10 @@ int ques7(int x) {
     return x & (~x+1);
 }
 
+int ans7(int x)
+{
+  
+}
 
 /* question 8 */
 int ques8(int x) {
@@ -136,6 +162,11 @@ int ques8(int x) {
     int z = !!x;
 
     return y | z;
+}
+
+int ans8(int x)
+{
+  
 }
 
 /* question 9 */
@@ -149,6 +180,10 @@ int ques9(int x, int n, int c) {
     return (z  | cshift);
 }
 
+int ans9(int x, int n, int c)
+{
+  
+}
 
 /* question 10 */
 
@@ -159,6 +194,10 @@ int ques10(int x) {
     return y & z;
 }
 
+int ans10(int x)
+{
+  
+}
 
 /* question 11 */
 
@@ -169,6 +208,10 @@ int ques11(int x, int y) {
     return !((!a & b) | (!(a ^ b) & (y+~x)>>31));
 }
 
+int ans11(int x, int y)
+{
+  
+}
 
 /* question 12 */
 int ques12(int x, int m, int n) {
@@ -178,6 +221,11 @@ int ques12(int x, int m, int n) {
     b = b + n;
 
     return !((a|b) >> 31);
+}
+
+int ans12(int x, int m, int n)
+{
+  
 }
 
 /* question 13 */
@@ -203,6 +251,11 @@ int ques13(int x) {
     return x;
 }
 
+int ans13(int x)
+{
+  
+}
+
 /* question 14 */
 int ques14(int x) {
     int result = 0;
@@ -212,6 +265,11 @@ int ques14(int x) {
         result ^=  (x >> i) & 0x1;
 
     return result;
+}
+
+int ans14(int x)
+{
+  
 }
 
 /* question 15 */
@@ -225,14 +283,19 @@ int ques15(int x, int n) {
     return (z & x);
 }
 
+int ans15(int x, int n)
+{
+  
+}
 
 
 
 int
-main(){
-    int a, b;
+main()
+{
+  int a, b;
 
-    int t1;
+  int t1;
 
  	printf("Enter first number, an integer stored into variable A preferably between 1 and 20:");
  	scanf ("%d",&a);
