@@ -11,16 +11,16 @@ Question 4:
   Returns 0 if n equals 0, returns -(2^(32 - n)) if n is greater than 0 and less than 32.
 
 Question 5:
-  
+  Returns 0 if even, returns -1 if odd.
 
 Question 6:
-  
+  Starts with the hex number 0x55 (01010101 in binary) and turns it into the hex number 0x5555 (0101010101010101 in binary) and finally turns that into the hex number 0x55555555 (01010101010101010101010101010101 in binary).
 
 Question 7:
-  
+  Returns the highest power of 2 that the input is divisible by.
 
 Question 8:
-  
+  Returns -1 if x is less than 0, returns 1 if x is greater than 0, and returns 0 if x equals 0.
 
 Question 9:
   
