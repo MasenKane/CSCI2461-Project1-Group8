@@ -26,19 +26,19 @@ Question 9:
   
 
 Question 10:
-  
+  Can only return 0, because y is 1 whenever x isn't 0, and z is 1 whenever x is 0. y & z can never be 1.
 
 Question 11:
-  
+  Returns 1 when x is negative and y is positive. Returns 0 in all other cases.
 
 Question 12:
-  
+  Returns 1 if x is greater than m and n is greater than x. Otherwise it returns 0.
 
 Question 13:
-  
+  Returns the number of 1s present in the binary representation of the number.
 
 Question 14:
-  
+  Returns 1 if there are an odd number of true bits. Returns 0 if there are an even number of true bits.
 
 Question 15:
-  
+  Masks everything but the leftmost n bits of the number x.
