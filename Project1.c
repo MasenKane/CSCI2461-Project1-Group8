@@ -90,7 +90,12 @@ int ques2(x) {
 
 int ans2(x)
 {
-  
+  if (x >= 0) {
+    return x;
+  } 
+  if (x < 0 ) {
+    return x*(-1);
+  }
 }
 
 /* question 3 */
@@ -104,7 +109,12 @@ int ques3(int x){
 
 int ans3(int x)
 {
-  
+  if (x <= 0) {
+    return  0;  
+  }
+  if (x > 0) {
+    return 1;
+  }
 }
 
 /* question 4 */
@@ -120,7 +130,9 @@ int ques4(int n) {
 
 int ans4(int n)
 {
-  
+  if (n = 0) {
+    
+  } 
 }
 
 /* question 5 */
