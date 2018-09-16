@@ -300,7 +300,12 @@ int ques13(int x) {
 
 int ans13(int x)
 {
-  
+  int i;
+  int count = 0;
+  for (i = 0; i < 32; i++)
+    if ((x >> i) & 1 == 1)
+      count++;
+  return count;
 }
 
 /* question 14 */
@@ -346,7 +351,7 @@ main()
 {
   int a, b;
 
-  int t1, t15;
+  int t1, t15, t13;
 
  	printf("Enter first number, an integer stored into variable A preferably between 1 and 20:");
  	scanf ("%d",&a);
@@ -362,8 +367,9 @@ main()
 	t1=ques0(a,b);
 	printf("output of ques0 is t1 = %d  \n", t1);
     /* To test/run the functions, you will need to input numbers and then call each of the functions, and print the return value */
+  t13 = ques13(12);
   t15 = ques15(47,4);
-  printf ("%d\n", t15);
+  printf ("%d\n", t13);
 
 	return 0;
 }
