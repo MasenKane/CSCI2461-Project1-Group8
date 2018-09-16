@@ -131,8 +131,11 @@ int ques4(int n) {
 int ans4(int n)
 {
   if (n = 0) {
-    
+    return 0;
   } 
+  if (0< n <=32) {
+    return -(2^(32-n));
+  }
 }
 
 /* question 5 */
@@ -143,6 +146,14 @@ int ques5(int x) {
 
     return result;
 
+}
+
+int answ5 (int x) {
+  if (x % 2 == 0) {
+    return 0;
+  }
+  else 
+    return -1;
 }
 
 /* question 6 */
@@ -156,7 +167,7 @@ int ques6(void) {
 
 int ans6(void)
 {
-  
+  return 0x55555555;
 }
 
     /* question 7 */
@@ -168,7 +179,11 @@ int ques7(int x) {
 
 int ans7(int x)
 {
-  
+  int i = 1;
+  while (x % (i*2) == 0) {
+    i = i * 2;
+  }
+  return i;
 }
 
 /* question 8 */
@@ -181,7 +196,13 @@ int ques8(int x) {
 
 int ans8(int x)
 {
-  
+  if (x>0) 
+    return 1;
+  else if (x == 0) {
+    return 0;
+  }
+  else 
+    return -1;
 }
 
 /* question 9 */
@@ -197,7 +218,12 @@ int ques9(int x, int n, int c) {
 
 int ans9(int x, int n, int c)
 {
-  
+  if (n>3) {
+    return x;
+  } 
+  if (n == 0) {
+    
+  }
 }
 
 /* question 10 */
@@ -211,7 +237,7 @@ int ques10(int x) {
 
 int ans10(int x)
 {
-  
+  return 0; 
 }
 
 /* question 11 */
@@ -225,7 +251,10 @@ int ques11(int x, int y) {
 
 int ans11(int x, int y)
 {
-  
+  if ((x <0) & (y>=0)) 
+    return 1;
+  else
+    return 0;
 }
 
 /* question 12 */
@@ -240,7 +269,10 @@ int ques12(int x, int m, int n) {
 
 int ans12(int x, int m, int n)
 {
-  
+  if ((n > x) && (x > m)) 
+    return 1;
+  else 
+    return 0;
 }
 
 /* question 13 */
@@ -300,7 +332,11 @@ int ques15(int x, int n) {
 
 int ans15(int x, int n)
 {
-  
+  int i;
+  for (i = 0; i < n; i++){
+      printf("yo");
+      return (x >> i) & 0x1;
+  }
 }
 
 
@@ -310,7 +346,7 @@ main()
 {
   int a, b;
 
-  int t1;
+  int t1, t15;
 
  	printf("Enter first number, an integer stored into variable A preferably between 1 and 20:");
  	scanf ("%d",&a);
@@ -326,7 +362,8 @@ main()
 	t1=ques0(a,b);
 	printf("output of ques0 is t1 = %d  \n", t1);
     /* To test/run the functions, you will need to input numbers and then call each of the functions, and print the return value */
-
+  t15 = ques15(47,4);
+  printf ("%d\n", t15);
 
 	return 0;
 }
