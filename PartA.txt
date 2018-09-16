@@ -1,11 +1,14 @@
 Question 1:
   If the input is 0, it will return 1. For any other input it will return 0.
   
+Question 2:
+  If x is greater than or equal to 0, it will return x, if x is less than 0, if will return the 2's complement (the positive number).
+
 Question 3:
-  
+  Returns 1 if x is greater than 0, returns 0 if x is less than or equal to 0.
 
 Question 4:
-  
+  Returns 0 if n equals 0, returns -(2^(32 - n)) if n is greater than 0 and less than 32.
 
 Question 5:
   
