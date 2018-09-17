@@ -14,7 +14,8 @@ Question 5:
   Returns 0 if even, returns -1 if odd.
 
 Question 6:
-  Starts with the hex number 0x55 (01010101 in binary) and turns it into the hex number 0x5555 (0101010101010101 in binary) and finally turns that into the hex number 0x55555555 (01010101010101010101010101010101 in binary).
+  Starts with the hex number 0x55 (01010101 in binary) and turns it into the hex number 0x5555 (0101010101010101 in binary) and finally 
+  turns that into the hex number 0x55555555 (01010101010101010101010101010101 in binary).
 
 Question 7:
   Returns the highest power of 2 that the input is divisible by.
@@ -23,7 +24,11 @@ Question 8:
   Returns -1 if x is less than 0, returns 1 if x is greater than 0, and returns 0 if x equals 0.
 
 Question 9:
-  
+  If n is less than 0 or greater than 3, return x. If n = 0, substitute the rightmost 8 bits of x with the rightmost 8 bits of c and 
+  return that value. If n = 1, substitute the ninth through the sixteenth bits from the right of x with the rightmost 8 bits of c and
+  return that value. If n = 1, substitute the seventeenth through the twenty-fourth bits from the right of x with the rightmost 8 bits of c and
+  return that value. If n = 1, substitute the twenty-fifth through the final bits from the right of x with the rightmost 8 bits of c and
+  return that value. 
 
 Question 10:
   Can only return 0, because y is 1 whenever x isn't 0, and z is 1 whenever x is 0. y & z can never be 1.
