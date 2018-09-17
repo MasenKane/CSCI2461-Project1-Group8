@@ -26,8 +26,8 @@ Question 8:
 Question 9:
   If n is less than 0 or greater than 3, return x. If n = 0, substitute the rightmost 8 bits of x with the rightmost 8 bits of c and 
   return that value. If n = 1, substitute the ninth through the sixteenth bits from the right of x with the rightmost 8 bits of c and
-  return that value. If n = 1, substitute the seventeenth through the twenty-fourth bits from the right of x with the rightmost 8 bits of c and
-  return that value. If n = 1, substitute the twenty-fifth through the final bits from the right of x with the rightmost 8 bits of c and
+  return that value. If n = 2, substitute the seventeenth through the twenty-fourth bits from the right of x with the rightmost 8 bits of c and
+  return that value. If n = 3, substitute the twenty-fifth through the final bits from the right of x with the rightmost 8 bits of c and
   return that value. 
 
 Question 10:
