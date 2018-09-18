@@ -24,11 +24,11 @@ Question 8:
   Returns -1 if x is less than 0, returns 1 if x is greater than 0, and returns 0 if x equals 0.
 
 Question 9:
-  If n is less than 0 or greater than 3, return x. If n = 0, substitute the rightmost 8 bits of x with the rightmost 8 bits of c and 
-  return that value. If n = 1, substitute the ninth through the sixteenth bits from the right of x with the rightmost 8 bits of c and
-  return that value. If n = 2, substitute the seventeenth through the twenty-fourth bits from the right of x with the rightmost 8 bits of c and
-  return that value. If n = 3, substitute the twenty-fifth through the final bits from the right of x with the rightmost 8 bits of c and
-  return that value. 
+  First do n % 4. If shift = 0, substitute the rightmost 8 bits of x with the rightmost 8 bits of c and 
+  return that value. If shift = 1, substitute the ninth through the sixteenth bits from the right of x with the rightmost 8 bits of c and
+  return that value. If shift = 2, substitute the seventeenth through the twenty-fourth bits from the right of x with the rightmost 8 bits 
+  of c and return that value. If shift = 3, substitute the twenty-fifth through the final bits from the right of x with the rightmost 8 
+  bits of c and return that value. 
 
 Question 10:
   Can only return 0, because y is 1 whenever x isn't 0, and z is 1 whenever x is 0. y & z can never be 1.
