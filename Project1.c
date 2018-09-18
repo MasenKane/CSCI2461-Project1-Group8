@@ -219,31 +219,28 @@ int ques9(int x, int n, int c) {
 
 int ans9(int x, int n, int c)
 {
-  /*
-  c = c & 0xff;
-  int shift = ((n + 1) % 4);
-  if (shift == 1)
+  c = c & 0x000000ff;
+  int shift = (n % 4);
+  if (shift == 0)
   {
     x = x & 0xffffff00;
-    return x & c;
+    return x | c;
+  }
+  else if (shift == 1)
+  {
+    x = x & 0xffff00ff;
+    return x | (c << 8);
   }
   else if (shift == 2)
   {
-    x = x & 0xffff00ff;
-    return x & (c << 8);
+    x = x & 0xff00ffff;
+    return x | (c << 16);
   }
   else if (shift == 3)
   {
-    x = x & 0xff00ffff;
-    return x & (c << 16);
-  }
-  else if (shift == 0)
-  {
     x = x & 0x00ffffff;
-    return x & (c << 24);
+    return x | (c << 24);
   }
-  */
-  
 }
 
 /* question 10 */
@@ -406,8 +403,8 @@ main()
   t7 = ans7(192);
   q8 = ques8(3);
   t8 = ans8(3);
-  q9 = ques9(17849,8,987);
-  t9 = ans9(17849,8,987);
+  q9 = ques9(5651,1,19);
+  t9 = ans9(5651,1,19);
   q10 = ques10(-4);
   t10 = ans10(-4);
   q11 = ques11(3,-3);
