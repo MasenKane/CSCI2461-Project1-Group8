@@ -219,6 +219,7 @@ int ques9(int x, int n, int c) {
 
 int ans9(int x, int n, int c)
 {
+  /*
   c = c & 0xff;
   int shift = ((n + 1) % 4);
   if (shift == 1)
@@ -241,6 +242,8 @@ int ans9(int x, int n, int c)
     x = x & 0x00ffffff;
     return x & (c << 24);
   }
+  */
+  
 }
 
 /* question 10 */
