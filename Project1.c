@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <math.h>
 
 /* 
-Group number: 
-Team members: 
+Group number: 8
+Team members: Masen Kane, Jaeseok Choi, Jacob, Cannizzaro
 */
 
 /* PROJECT 1 */
@@ -133,8 +134,8 @@ int ans4(int n)
   if (n = 0) {
     return 0;
   } 
-  if (0< n <=32) {
-    return -(2^(32-n));
+  if ((n > 0) && (n <= 32)) {
+    return -(pow(2,(32-n)));
   }
 }
 
@@ -148,7 +149,7 @@ int ques5(int x) {
 
 }
 
-int answ5 (int x) {
+int ans5 (int x) {
   if (x % 2 == 0) {
     return 0;
   }
@@ -218,11 +219,27 @@ int ques9(int x, int n, int c) {
 
 int ans9(int x, int n, int c)
 {
-  if (n>3) {
-    return x;
-  } 
-  if (n == 0) {
-    
+  c = c & 0xff;
+  int shift = ((n + 1) % 4);
+  if (shift == 1)
+  {
+    x = x & 0xffffff00;
+    return x & c;
+  }
+  else if (shift == 2)
+  {
+    x = x & 0xffff00ff;
+    return x & (c << 8);
+  }
+  else if (shift == 3)
+  {
+    x = x & 0xff00ffff;
+    return x & (c << 16);
+  }
+  else if (shift == 0)
+  {
+    x = x & 0x00ffffff;
+    return x & (c << 24);
   }
 }
 
@@ -321,7 +338,17 @@ int ques14(int x) {
 
 int ans14(int x)
 {
-  
+  int count = 0;
+  while (x > 0)
+  {
+    if (x % 2 == 1)
+      count++;
+    x = x / 2;
+  }
+  if (count % 2 == 1)
+    return 1;
+  else
+    return 0;
 }
 
 /* question 15 */
@@ -338,10 +365,16 @@ int ques15(int x, int n) {
 int ans15(int x, int n)
 {
   int i;
-  for (i = 0; i < n; i++){
-      printf("yo");
-      return (x >> i) & 0x1;
+  int mult = 1;
+  int result = 0;
+  for (i = 0; i < n; i++)
+  {
+    if (x % 2 == 1)
+      result = result + mult;
+    mult = mult * 2;
   }
+  
+  return result;
 }
 
 
@@ -351,25 +384,56 @@ main()
 {
   int a, b;
 
-  int t1, t15, t13;
-
- 	printf("Enter first number, an integer stored into variable A preferably between 1 and 20:");
- 	scanf ("%d",&a);
-	printf("\n");
- 	printf("Enter second number, an integer stored into variable B preferably between 1 and 20:");
- 	scanf ("%d", &b);
-	printf("\n");
-
-
-	printf("you entered a= %d b= %d  \n", a,b);
-
-
-	t1=ques0(a,b);
-	printf("output of ques0 is t1 = %d  \n", t1);
-    /* To test/run the functions, you will need to input numbers and then call each of the functions, and print the return value */
-  t13 = ques13(12);
-  t15 = ques15(47,4);
-  printf ("%d\n", t13);
+  int q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15;
+  int t1, t2, t3, t4, t5, t6, t7, t8 ,t9, t10, t11, t12, t13, t14, t15;
+	
+  q1 = ques1(0);
+  t1 = ans1(0);
+  q2 = ques2(-5);
+  t2 = ans2(-5);
+  q3 = ques3(-5);
+  t3 = ans3(-5);
+  q4 = ques4(31);
+  t4 = ans4(31);
+  q5 = ques5(3);
+  t5 = ans5(3);
+  q6 = ques6();
+  t6 = ans6();
+  q7 = ques7(192);
+  t7 = ans7(192);
+  q8 = ques8(3);
+  t8 = ans8(3);
+  q9 = ques9(17849,8,987);
+  t9 = ans9(17849,8,987);
+  q10 = ques10(-4);
+  t10 = ans10(-4);
+  q11 = ques11(3,-3);
+  t11 = ans11(3,-3);
+  q12 = ques12(5,3,2);
+  t12 = ans12(5,3,2);
+  q13 = ques13(-4684);
+  t13 = ans13(-4684);
+  q14 = ques14(-76841);
+  t14 = ans14(-76841);
+  q15 = ques15(47,4);
+  t15 = ans15(47,4);
+  
+  //Remember to use -lm when compiling
+  printf ("Question 1: %d %d\n", q1, t1);
+  printf ("Question 2: %d %d\n", q2, t2);
+  printf ("Question 3: %d %d\n", q3, t3);
+  printf ("Question 4: %d %d\n", q4, t4);
+  printf ("Question 5: %d %d\n", q5, t5);
+  printf ("Question 6: %d %d\n", q6, t6); 
+  printf ("Question 7: %d %d\n", q7, t7);
+  printf ("Question 8: %d %d\n", q8, t8);
+  printf ("Question 9: %d %d\n", q9, t9);
+  printf ("Question 10: %d %d\n", q10, t10);
+  printf ("Question 11: %d %d\n", q11, t12);
+  printf ("Question 12: %d %d\n", q12, t12);
+  printf ("Question 13: %d %d\n", q13, t13);
+  printf ("Question 14: %d %d\n", q14, t14);
+  printf ("Question 15: %d %d\n", q15, t15);
 
 	return 0;
 }
