@@ -1,17 +1,32 @@
+Group Number: 8
+Team Members: Masen Kane, Jaesok Choi, Jacob Cannizzaro
+
 Question 1:
-  If the input is 0, it will return 1. For any other input it will return 0.
+  The first thing that this program does is set y equal to the 2's complement of x. Then z is set equal to the complement of y or x. 
+  Then it is bit shifted down 31 bits. This will just make the entire number 1's or 0's depending on the sign of the number. The only
+  way it will return 1 is if the original input is 0. For any other input it will return 0.
   
 Question 2:
-  If x is greater than or equal to 0, it will return x, if x is less than 0, if will return the 2's complement (the positive number).
+  The first thing that the program does is set mask equal to the number bit shifted 31 bits (which will just be the sign bit). Next, it 
+  is bitwise OR'ed with the original number and is put into y. This will be all 1's if the number was negative or just x if the number
+  was positive. Then z is set to the complement of mask + 1, which will be 1 if the munber was negative or 0 if it was positive. In the 
+  end, if x is greater than or equal to 0, it will return x, if x is less than 0, if will return the 2's complement (the positive number).
 
 Question 3:
-  Returns 1 if x is greater than 0, returns 0 if x is less than or equal to 0.
+  First y is set to not x, which will be 1 if it is 0, and 0 for all other values. Then z is set to x bit shifted 31 bits (which will just 
+  be the sign bit 32 times) Then z is set to z OR y, which will be 1 if x is negative or 0. Then this is NOT'ed and returns 1 if x is 
+  greater than 0, and returns 0 if x is less than or equal to 0.
 
 Question 4:
-  Returns 0 if n equals 0, returns -(2^(32 - n)) if n is greater than 0 and less than 32.
+  First x is set to NOT(NOT(n)) which will be 0 if n is 0 or 1 in all other cases. It is then bit shifted to the left 31 bits and then to
+  the right 31 bits. This will be all 0's if NOT(NOT(n)) was 0, or all 1's in all other cases. Then y is bit shifted 31 bits to the left, 
+  and then shited right (n - 1) times which will make the rightmost n bits of the number 1's (which is the 2's complement representation 
+  of the number 2(32 - n). In the end, this will return 0 if n equals 0, returns -(2^(32 - n)) if n is greater than 0 and less than 32.
 
 Question 5:
-  Returns 0 if even, returns -1 if odd.
+  All that this program does is bit shift the number 31 bits to the left and then 31 bits to the left. This will take the 1st bit (the 
+  ones bits) and returns all 1's if the bit was a 1 or all 0's if the number was a 0. In the end this just returns 0 if even, returns -1 if 
+  odd.
 
 Question 6:
   Starts with the hex number 0x55 (01010101 in binary) and turns it into the hex number 0x5555 (0101010101010101 in binary) and finally 
